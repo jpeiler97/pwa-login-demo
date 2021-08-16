@@ -1,2 +1,0 @@
-(this["webpackJsonppwa-login-demo"]=this["webpackJsonppwa-login-demo"]||[]).push([[0],{9:function(e,n,t){"use strict";t.r(n);t(1);var r=t(3),o=t.n(r),c=t(0);var i=function(){return Object(c.jsx)("div",{children:"Hello World"})};var s=function(){return Object(c.jsx)("h1",{children:Object(c.jsx)(i,{})})};o.a.render(Object(c.jsx)(s,{}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.5040d240.chunk.js.map

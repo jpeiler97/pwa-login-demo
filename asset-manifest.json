@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/pwa-login-demo/static/js/main.5040d240.chunk.js",
-    "main.js.map": "/pwa-login-demo/static/js/main.5040d240.chunk.js.map",
+    "main.js": "/pwa-login-demo/static/js/main.78697664.chunk.js",
+    "main.js.map": "/pwa-login-demo/static/js/main.78697664.chunk.js.map",
     "runtime-main.js": "/pwa-login-demo/static/js/runtime-main.c54f4058.js",
     "runtime-main.js.map": "/pwa-login-demo/static/js/runtime-main.c54f4058.js.map",
-    "static/js/2.b36755aa.chunk.js": "/pwa-login-demo/static/js/2.b36755aa.chunk.js",
-    "static/js/2.b36755aa.chunk.js.map": "/pwa-login-demo/static/js/2.b36755aa.chunk.js.map",
+    "static/js/2.4ad16d43.chunk.js": "/pwa-login-demo/static/js/2.4ad16d43.chunk.js",
+    "static/js/2.4ad16d43.chunk.js.map": "/pwa-login-demo/static/js/2.4ad16d43.chunk.js.map",
     "index.html": "/pwa-login-demo/index.html",
-    "static/js/2.b36755aa.chunk.js.LICENSE.txt": "/pwa-login-demo/static/js/2.b36755aa.chunk.js.LICENSE.txt"
+    "static/js/2.4ad16d43.chunk.js.LICENSE.txt": "/pwa-login-demo/static/js/2.4ad16d43.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c54f4058.js",
-    "static/js/2.b36755aa.chunk.js",
-    "static/js/main.5040d240.chunk.js"
+    "static/js/2.4ad16d43.chunk.js",
+    "static/js/main.78697664.chunk.js"
   ]
 }
