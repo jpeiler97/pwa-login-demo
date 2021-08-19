@@ -1,28 +1,10 @@
 import React, { useState } from "react";
-import LoginForm from "./components/LoginForm";
+import { HashRouter as Router, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
-  const admin = {
-    email: "admin@admin.com",
-    password: "qqq",
-  };
-
   const [user, setUser] = useState({ name: "", email: "" });
-  const [error, setError] = useState("");
-
-  const Login = (details) => {
-    console.log(details);
-
-    if (details.email === admin.email && details.password === admin.password) {
-      setUser({
-        name: details.name,
-        email: details.email,
-      });
-    } else {
-      console.log("Details do not match");
-      setError("Details do not match");
-    }
-  };
 
   const Logout = () => {
     setUser({ name: "", email: "" });
@@ -38,7 +20,15 @@ function App() {
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
-        <LoginForm Login={Login} error={error}></LoginForm>
+        <div>
+          <Router>
+            <main>
+              <Route exact path="/" component={LoginPage} />
+              <Route exact path="/login" component={LoginPage} />
+              <Route exact path="/register" component={RegisterPage} />
+            </main>
+          </Router>
+        </div>
       )}
     </div>
   );
