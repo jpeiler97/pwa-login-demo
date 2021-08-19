@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RegisterForm from "../components/RegisterForm";
+import Home from "./Home";
 import { Link, useLocation } from "react-router-dom";
 
 function RegisterPage() {
@@ -18,7 +19,6 @@ function RegisterPage() {
       });
       setError("");
     } else {
-      console.log("Passwords do not match");
       setError("Passwords do not match");
     }
   };
@@ -29,19 +29,14 @@ function RegisterPage() {
   return (
     <div>
       {user.email !== "" ? (
-        <div className="welcome">
-          <h2>
-            Welcome, <span>{user.name}</span>
-          </h2>
-          <button onClick={Logout}>Logout</button>
-        </div>
+        <Home Logout={Logout} username={user.name}></Home>
       ) : (
         <div>
           <RegisterForm Register={Register} error={error}></RegisterForm>
           <Link
-            to="/"
+            to="/login"
             className={
-              location.pathname === "/" ? "nav-link active" : "nav-link"
+              location.pathname === "/login" ? "nav-link active" : "nav-link"
             }
           >
             Login

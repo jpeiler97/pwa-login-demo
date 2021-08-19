@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import Welcome from "./pages/Welcome";
 
 function App() {
   const [user, setUser] = useState({ name: "", email: "" });
@@ -23,7 +24,7 @@ function App() {
         <div>
           <Router>
             <main>
-              <Route exact path="/" component={LoginPage} />
+              <Route exact path="/" component={Welcome} />
               <Route exact path="/login" component={LoginPage} />
               <Route exact path="/register" component={RegisterPage} />
             </main>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LoginForm from "../components/LoginForm";
+import Home from "./Home";
 import { Link, useLocation } from "react-router-dom";
 
 function LoginPage() {
@@ -23,7 +24,6 @@ function LoginPage() {
       });
       setError("");
     } else {
-      console.log("Details do not match");
       setError("Details do not match");
     }
   };
@@ -31,15 +31,11 @@ function LoginPage() {
   const Logout = () => {
     setUser({ name: "", email: "" });
   };
+
   return (
     <div>
       {user.email !== "" ? (
-        <div className="welcome">
-          <h2>
-            Welcome, <span>{user.name}</span>
-          </h2>
-          <button onClick={Logout}>Logout</button>
-        </div>
+        <Home Logout={Logout} username={user.name}></Home>
       ) : (
         <div>
           <LoginForm Login={Login} error={error}></LoginForm>
