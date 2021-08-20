@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LoginForm from "../components/LoginForm";
 import Home from "./Home";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, Redirect } from "react-router-dom";
 
 function LoginPage() {
   const location = useLocation();
@@ -18,11 +18,8 @@ function LoginPage() {
     console.log(details);
 
     if (details.email === admin.email && details.password === admin.password) {
-      setUser({
-        name: details.name,
-        email: details.email,
-      });
-      setError("");
+      console.log("it should work!");
+      setUser({ name: details.name, email: details.email });
     } else {
       setError("Details do not match");
     }
@@ -34,21 +31,25 @@ function LoginPage() {
 
   return (
     <div>
-      {user.email !== "" ? (
-        <Home Logout={Logout} username={user.name}></Home>
-      ) : (
-        <div>
-          <LoginForm Login={Login} error={error}></LoginForm>
-          <Link
-            to="/register"
-            className={
-              location.pathname === "/register" ? "nav-link active" : "nav-link"
-            }
-          >
-            Register
-          </Link>
-        </div>
-      )}
+      <div>
+        {user.email !== "" ? (
+          <Redirect to="/home" />
+        ) : (
+          <div>
+            <LoginForm Login={Login} error={error}></LoginForm>
+            <Link
+              to="/register"
+              className={
+                location.pathname === "/register"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Register
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-
+  const submitHandler = () => {
     Login(details);
   };
 
