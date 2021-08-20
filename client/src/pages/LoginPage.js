@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LoginForm from "../components/LoginForm";
-import Home from "./Home";
 import { Link, useLocation, Redirect } from "react-router-dom";
 
 function LoginPage() {
