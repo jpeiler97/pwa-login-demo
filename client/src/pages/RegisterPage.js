@@ -33,14 +33,6 @@ function RegisterPage() {
       ) : (
         <div>
           <RegisterForm Register={Register} error={error}></RegisterForm>
-          <Link
-            to="/login"
-            className={
-              location.pathname === "/login" ? "nav-link active" : "nav-link"
-            }
-          >
-            Login
-          </Link>
         </div>
       )}
     </div>

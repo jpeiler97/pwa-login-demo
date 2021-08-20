@@ -23,14 +23,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <Router>
-            <Switch>
-              <Route exact path="/" component={Welcome} />
-              <Route exact path="/home" component={Home} />
-              <Route exact path="/login" component={LoginPage} />
-              <Route exact path="/register" component={RegisterPage} />
-            </Switch>
-          </Router>
+          <LoginPage></LoginPage>
         </div>
       )}
     </div>
