@@ -16,6 +16,7 @@ function LoginPage() {
 
     if (details.email === admin.email && details.password === admin.password) {
       setUser({ name: details.name, email: details.email });
+      setError("");
     } else {
       setError("Details do not match");
     }
