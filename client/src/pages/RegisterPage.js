@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import RegisterForm from "../components/RegisterForm";
 import Home from "./Home";
-import { Link, useLocation } from "react-router-dom";
 
 function RegisterPage() {
-  const location = useLocation();
-
   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
 

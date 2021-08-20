@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import Welcome from "./pages/Welcome";
-import Home from "./pages/Home";
 
 function App() {
   const [user, setUser] = useState({ name: "", email: "" });
